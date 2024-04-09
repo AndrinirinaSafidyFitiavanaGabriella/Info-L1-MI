@@ -1,0 +1,104 @@
+fonction nB(valeurs_d'entrée)
+    Pour chaque valeur v dans les valeurs_d'entrée de l'indice 1 à l'indice 2
+        Si v est égal à 0
+            Retourner 1
+        Sinon
+            Retourner 0
+
+fonction AB(valeurs_d'entrée)
+    Initialiser x à 0
+    Pour chaque valeur v dans les deux premières valeurs_d'entrée
+        Si v est égal à 1
+            Incrémenter x de 1
+        Sinon
+            Continuer
+    Si x est supérieur à 1
+        Retourner 1
+    Sinon
+        Retourner 0
+
+fonction nBC(valeurs_d'entrée)
+    Initialiser x à 0
+    nb = nB(valeurs_d'entrée)
+    Pour chaque valeur v dans les valeurs_d'entrée de l'indice 2 à l'indice 3
+        Si v est égal à 1 ET nb est égal à 1
+            Retourner 1
+        Sinon
+            Retourner 0
+
+fonction nC(valeurs_d'entrée)
+    Pour chaque valeur v dans les valeurs_d'entrée de l'indice 2 à l'indice 3
+        Si v est égal à 0
+            Retourner 1
+        Sinon
+            Retourner 0
+
+fonction AnC(valeurs_d'entrée)
+    Initialiser x à 0
+    nc = nC(valeurs_d'entrée)
+    Pour chaque valeur v dans les valeurs_d'entrée de l'indice 0 à l'indice 1
+        Si v est égal à 1 ET nc est égal à 1
+            Retourner 1
+        Sinon
+            Retourner 0
+
+fonction res(valeurs_d'entrée)
+    Initialiser x à 0
+    anc = AnC(valeurs_d'entrée)
+    ab = AB(valeurs_d'entrée)
+    nbc = nBC(valeurs_d'entrée)
+    Pour chaque valeur v dans les valeurs_d'entrée
+        Si ab est égal à 1 OU anc est égal à 1 OU nbc est égal à 1
+            Retourner 1
+        Sinon
+            Retourner 0
+
+fonction formes_canoniques_premières(valeurs_d'entrée)
+    a, b, c = "", "", ""
+    resultat = ""
+    x = 0
+    Pour chaque valeur v dans les valeurs_d'entrée
+        Si x est égal à 0
+            Si v est égal à 1
+                a = "(A"
+            Sinon
+                a = "(!A"
+            Incrémenter x de 1
+        Sinon si x est égal à 1
+            Si v est égal à 1
+                b = "B"
+            Sinon
+                b = "!B"
+            Incrémenter x de 1
+        Sinon si x est égal à 2
+            Si v est égal à 1
+                c = "C) "
+            Sinon
+                c = "!C)"
+    Ajouter a, b et c à resultat
+    Retourner resultat
+
+fonction formes_canoniques_secondes(valeurs_d'entrée)
+    a, b, c = "", "", ""
+    resultat = ""
+    x = 0
+    Pour chaque valeur v dans les valeurs_d'entrée
+        Si x est égal à 0
+            Si v est égal à 0
+                a = "(A"
+            Sinon
+                a = "(!A"
+            Incrémenter x de 1
+        Sinon si x est égal à 1
+            Si v est égal à 0
+                b = "B"
+            Sinon
+                b = "!B"
+            Incrémenter x de 1
+        Sinon si x est égal à 2
+            Si v est égal à 0
+                c = "C) "
+            Sinon
+                c = "!C)"
+    Ajouter a, b et c à resultat
+    Retourner resultat
