@@ -1,4 +1,5 @@
-   Algorithme 2
+Exo2
+Algorithme 2
 
 fonction karnaugh_minimization()
     // Création de la table de Karnaugh
