@@ -1,3 +1,5 @@
+   Algorithme 2
+
 fonction karnaugh_minimization()
     // Création de la table de Karnaugh
     k_map = [[0, 0, 0, 0],
